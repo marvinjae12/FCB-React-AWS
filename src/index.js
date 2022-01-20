@@ -6,7 +6,7 @@ import "./index.css";
 
 function App() {
   const paraStyle = {
-    "marginBottom": "15px"
+    "marginBottom": "15px",
   };
 
   return (
