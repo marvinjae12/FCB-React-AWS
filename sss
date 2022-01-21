@@ -1,0 +1,26 @@
+[1mdiff --git a/src/index.js b/src/index.js[m
+[1mindex b45ba77..fc9dc4a 100644[m
+[1m--- a/src/index.js[m
+[1m+++ b/src/index.js[m
+[36m@@ -12,11 +12,18 @@[m [mfunction Task(props){[m
+ }[m
+ [m
+ function TasksList(){[m
+[32m+[m[32m  const tasksItemsList = [[m
+[32m+[m[32m    "Follow Edukasyon.ph on Facebook",[m
+[32m+[m[32m    "Follow AWS Siklap Pilipinas on Facebook",[m
+[32m+[m[32m    "Follow Zuitt Coding Bootcamp on Facebook",[m
+[32m+[m[32m  ];[m
+[32m+[m
+   return ([m
+     <ul>[m
+[31m-      <Task taskName="Follow Edukasyon.ph on Facebook"/>[m
+[31m-      <Task taskName="Follow AWS Siklab Pilipinas on Facebook"/>[m
+[31m-      <Task taskName="Follow Zuitt Coding Bootcamp on Facebook"/>[m
+[32m+[m[32m    {tasksItemsList.map((task, index) => {[m
+[32m+[m[32m      console.log(task, index);[m
+[32m+[m[32m      return <Task key={index} taskName={task}/>;[m
+[32m+[m[32m  })}[m
+     </ul>[m
+   );[m
+ }[m
